@@ -1,0 +1,176 @@
+@import "header.css";
+@import "nav.css";
+@import "hero.css";
+@import "footer.css";
+@import "main.css";
+@import "mode.css";
+@import "Media-queries.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --primary-color: #6800D0;
+    --gray: #80808067;
+    --bg: url(../asset/lightbg.svg);
+    --small-font-size: 15px;
+  }
+  .darkmode{
+    --black: #ffffff;
+    --white: #000000;
+    --primary-color: #3e0a72;
+    --gray: #ada6a667;
+    --bg: url(../asset/darkbg.svg);
+  }
+  .blend{
+    background-blend-mode: luminosity !important;
+  }
+  a:-webkit-any-link {
+    color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+  /* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(255, 255, 255, 0.5);
+
+}
+  html {
+    height: 600px;
+  }
+  body {
+    min-width: 410px;
+    font-family: "Poppins", sans-serif;
+    background-image: var(--bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+  }
+  #gotop{
+    transform: translateY(-10000px);
+  }
+  .welcome{
+    text-align: center;
+    width: 294px;
+    height: 190px;
+    background-color: var(--primary-color);
+    margin-inline: auto;
+    margin-block: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: var(--white);
+  }
+  .welcome h1{
+   margin-bottom: 10px;
+   position: relative;
+   z-index: 10;
+  }
+  .welcome h1::before{
+  content: "";
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -59px;
+    left: -21px;
+  background-color: rgba(255, 255, 255, 0.712);
+  }
+  .welcome h1::after{
+  content: "";
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 59px;
+    left: 21px;
+  background-color: var(--black);
+  opacity: 0.568;
+  }
+  .welcome p{
+    position: relative;
+   z-index: 10;
+  }
+  .welcome p::before{
+  content: "";
+  display: block;
+  height: 156px;
+  width: 155px;
+  border-radius: 50%;
+  position: absolute;
+  top: -52px;
+  left: 217px;
+ background-color: var(--black);
+  opacity: 0.568;
+  }
+  .welcome p::after{
+  content: "";
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 59px;
+    left: 0px;
+  background-color: rgba(0, 0, 0, 0.568);
+  }
+  .welcome span{
+  font-size: 15px;
+  color: #000000c4;
+  position: relative;
+  }
+  .welcome span::after{
+    content: "";
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -210px;
+    left: 91px;
+    background-color: rgba(255, 255, 255, 0.712);
+    }
+    .Viewpop-div{
+     position: fixed;
+     height: 100vh;
+     width: 100%;
+     background-color: #00000080;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000000;
+    }
+    .Viewpop{
+      color: white;
+      /* display: block; */
+      position: absolute;
+      background: purple;
+      font-size: 22px;
+    }

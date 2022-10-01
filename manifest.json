@@ -1,0 +1,12 @@
+{
+  "name": "Spatium",
+  "version": "1.2",
+  "description": "save your url and note to space",
+  "permissions": ["storage", "tabs"],
+  "action": {
+  "default_popup": "popup.html",
+  "popup": "index.html",
+  "default_icon": "spatium-logo/icon.png"
+   },
+  "manifest_version": 3
+}

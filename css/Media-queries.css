@@ -1,0 +1,28 @@
+@media only screen and (min-width: 768px) {
+    .hero-created-img {
+        height: 55vh;
+    }
+    .hero-img {
+        height: 55vh;
+    }
+    .hero-icon {
+        top: 340px;
+    }
+    .favicon img {
+        height: 50px !important;
+        width: 50px !important;
+    }
+    nav {
+        visibility: hidden;
+        transform: translateX(0);
+        opacity: 0;
+        width: 30%;
+    
+    }
+    .activeNav {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}

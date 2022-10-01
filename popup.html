@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spatium</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/load.css">
+  <link rel="stylesheet" href="uu.css">
+  <script src="loader.js"></script>
+
+<body>
+  <div id="gotop"></div>
+
+
+
+  <div class="screen">
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="box-con" id="popup">
+    <div class="box" id="delayedPopup">
+      <div class="form">
+        <h2>Hi there! would like to know something about you</h2>
+        <div class="inputBox">
+          <input type="text" required="required" id="username">
+          <span>Your Username</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" maxlength="10" id="nickname">
+          <span>Your Nickname</span>
+          <i></i>
+        </div>
+        <div class="links">
+          <a href="#" id="skip">Skip</a>
+        </div>
+        <input type="submit" value="submit" id="submit-el">
+      </div>
+    </div>
+  </div>
+
+
+  <nav id="nav">
+    <div class="nav-con">
+      <div class="mode nav_hov" id="dark-mode-toggle">
+        <input type="checkbox" id="" class="toggle toggle_input inputmood">
+        <label id="label" class="toggle_label">
+          <div id="star">
+            <div class="star" id="star-1">★</div>
+            <div class="star" id="star-2">★</div>
+          </div>
+          <div id="moon"></div>
+        </label>
+        <p class="mode-text"></p>
+      </div>
+      <div class="nav_hov" style="cursor: auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="28" viewBox="0 0 350 280">
+          <path
+            d="m328 147-22-83c-4-18-20-29-44-29H89c-12 0-22 3-30 8-7 5-12 12-14 20l-22 84V210a30 30 0 00 13 25c8 6 20 10 30 10h220a50 50 0 00 30-10c9-7 13-16 13-25v-63Zm-263-80c3-10 10-14 22-14h176c12 0 20 4 22 14l18 70v2h-1l-2 1h-80c-3 0-6 0-8 3-2 1-3 3-3 6 0 7-4 13-10 18s-14 8-23 8c-9 0-17-3-23-8-6-5-10-11-10-18v-4l-3-2-4-2-4-1H48v-2h-1l18-70Z"
+            fill=var(--black) />
+          <path
+            d="M252 88H98a10 10 0 01-7-3 8 8 0 01-3-6c0-3 0-5 3-6 2-2 5-3 7-3h154c2 0 5 0 7 3 2 1 4 3 4 6 0 2-2 4-4 6a10 10 0 01-7 3Zm10 34H89c-3 0-6 0-8-2a8 8 0 01-3-6c0-3 0-5 3-6 2-2 5-3 8-3h174c3 0 6 0 8 3 2 1 3 3 3 6 0 2 0 4-3 6-2 2-5 3-8 3Z"
+            fill=var(--black) />
+        </svg>
+        <p>Number of tray</p>
+        <span id="trayNo">0</span>
+      </div>
+      <div class="nav_hov" style="cursor: auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="40" height="33" viewBox="0 0 4000 3300">
+          <path
+            d="M958 413c-121 0-238 40-324 110A348 348 0 00 500 791v1718c0 100 48 197 134 268 86 70 203 110 324 110h2084c121 0 238-40 324-110A348 348 0 00 3500 2509V791c0-100-48-197-134-268a512 512 0 00-324-110H958Zm875 206V790c0 82 40 160 110 218 70 58 166 91 265 91H3250v1410c0 94-93 171-208 171H958c-115 0-208-77-208-172V791c0-92 93-170 208-170h875ZM3250 894H2208a140 140 0 01-88-30 95 95 0 01-37-73V619h959c115 0 208 77 208 172v103Z"
+            fill=var(--black) />
+        </svg>
+
+        <p>Number of open tab</p>
+        <span id="open-tab">0</span>
+      </div>
+      <div class="nav_hov" id="theme">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="32" height="32" viewBox="0 0 320 320">
+          <path
+            d="M100 140a20 20 0 10 0-40 20 20 0 00 0 40Zm60-30a20 20 0 10 0-40 20 20 0 00 0 40Zm60 30a20 20 0 10 0-40 20 20 0 00 0 40Zm10 60a20 20 0 10 0-40 20 20 0 00 0 40Zm-40 50a20 20 0 10 0-40 20 20 0 00 0 40Z"
+            fill=var(--black) />
+          <path
+            d="M165.4 20A140 140 0 00 20 160a48.2 48.2 0 00 60.9 46.5l11.2-3A30 30 0 01 130 232.3V270a30 30 0 00 30 30 140 140 0 00 5.4-280Zm81.1 223.1A119.3 119.3 0 01 160 280a10 10 0 01-10-10v-37.6a50 50 0 00-63.3-48.2l-11.2 3A28.2 28.2 0 01 40 160.2 120 120 0 01 164.7 40 121.8 121.8 0 01 280 155.3a119 119 0 01-33.5 88v-.2Z"
+            fill=var(--black) />
+        </svg>
+
+        <div class="Theme-group">
+          <!-- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="Theme-group-close">
+            <circle cx="16" cy="16" r="16" fill=var(--white) />
+            <line x1="15.7857" y1="8" x2="15.7857" y2="25" stroke=var(--black) />
+            <line x1="6" y1="16" x2="26" y2="16" stroke=var(--black) />
+            <title>Close</title>
+          </svg> -->
+          <ul class="color-grid">
+            <li class="color1 color-option is-selected" data-color="#6800D0"></li>
+            <li class="color2 color-option" data-color="#3a68b7"></li>
+            <li class="color3 color-option" data-color="#34b7b0"></li>
+            <li class="color4 color-option" data-color="#4f8f44"></li>
+            <li class="color5 color-option" data-color="#c0582f"></li>
+            <li class="color6 color-option" data-color="#a83030"></li>
+            <li class="color7 color-option" data-color="#994385"></li>
+          </ul>
+        </div>
+        <p>Theme</p>
+      </div>
+      <div>
+        <a href="https://elebuteabraham.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <p>About Me</p>
+        </a>
+      </div>
+      <hr>
+      <a href="#gotop" id="gotop_con">
+        <div class="nav_hov">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30" height="30" viewBox="0 0 300 300">
+            <circle fill=var(--white) cx="150" cy="150" r="150" />
+            <path
+              d="M160 60c-5-6-15-6-20 0l-96 95a15 15 0 10 21 21L150 91l85 85a15 15 0 10 21-21l-95-96Zm5 240V70h-30v230h30Z"
+              fill=var(--black) />
+          </svg>
+
+          <p>go to top</p>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <header>
+    <div class="navbars">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header-con">
+      <div class="nav-icon">
+        <a href="https://www.buymeacoffee.com/abrahamelebute" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" height="25" viewBox="0 0 2000 2000">
+            <path
+              d="m575 0-100 233h-150v210h56l59 374h-92l121 686h78l80 497h742l5-33 74-465h74l121-685h-88l60-374h62v-210h-160l-100-233H574Zm44 67h753l64 149H554L620 66ZM390 300h1219v77H390V300Zm36 584h1137l-98 550-471-4-470 5-98-550Z"
+              fill="var(--black)" />
+            <title>Buy me a coffe</title>
+          </svg>
+        </a>
+        <a href="help.html">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" height="25" viewBox="0 0 2000 2000">
+            <path
+              d="M1000 1875a875 875 0 11 0-1750 875 875 0 01 0 1750ZM1000 2000a1000 1000 0 10 0-2000 1000 1000 0 00 0 2000Z"
+              fill=var(--black) />
+            <path
+              d="M657 723a30 30 0 00 30 31H790c17 0 31-14 33-31 12-82 68-142 168-142 86 0 164 43 164 146 0 80-46 116-120 171-84 62-150 133-146 249v27a31 31 0 00 31 30h102a31 31 0 00 30-30v-14c0-90 35-115 127-185 76-58 156-122 156-257 0-190-160-280-334-280-159 0-332 73-344 285Zm195 720c0 67 53 117 126 117 76 0 128-50 128-116 0-70-52-118-128-118-73 0-126 49-126 118Z"
+              fill="var(--black)" />
+            <title>Help</title>
+          </svg>
+        </a>
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" height="25" viewBox="0 0 250 250">
+            <path
+              d="m150 104-15-50a10 10 0 00-20 0l-15 50H53c-10 0-14 13-6 20L85 150 70 198c-3 10 9 18 17 11l38-29 38 30c8 6 20-2 17-12L165 150l38-27a10 10 0 00-6-19H150Z"
+              fill="var(--black)" />
+            <title>Rate</title>
+          </svg>
+        </a>
+      </div>
+      <div>
+        <img src="asset/profile.jpg" alt="profile" style="height: 43px; width: 43px;" id="profile-img" title="profile">
+        <div class="profile_acc">
+          <div class="subnav u-center-x">
+            <section class="user-profile">
+              <div class="media-object u-mb-1">
+                <img class="media-object__img" src="asset/profile.jpg" alt="">
+                <div class="media-object__body">
+                  <section class="user">
+                    <h1 class="user__name">
+                      Elebute Abrahame
+                    </h1>
+                    <p class="user__nickname">
+                      Airblast
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <ul class="list">
+              <li class="list__item">
+                <h2 class="title">Account</h2>
+                <ul class="nav-list">
+                  <li class="nav-list__item nav-list__link Settings">Settings &amp; Privacy</li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Language</a></li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <h2 class="title">Need Help?</h2>
+                <ul class="nav-list">
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Open Quick Help</a></li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <h2 class="title">Manage</h2>
+                <ul class="nav-list">
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Posts &amp; Activity</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Job posting account</a></li>
+                </ul>
+              </li>
+              <hr class="gh">
+              <li class="u-hr nav-list__link item" id="Factory-reset">Factory Reset</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-img">
+      <div id="hero-img">
+        <div class="wrapper">
+          <h1 class="wrapper-phrase">Hi! there Ben</h1>
+          <div class="heroInputdiv">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="heroInputRemove">
+              <circle cx="16" cy="16" r="16" fill=var(--white) />
+              <line x1="15.7857" y1="8" x2="15.7857" y2="25" stroke=var(--black) />
+              <line x1="6" y1="16" x2="26" y2="16" stroke=var(--black) />
+              <title>Quick input</title>
+            </svg>
+            <label class="input-wrapper" data-text="">
+              <input type="text" placeholder="type url to save...">">
+            </label>
+          </div>
+        </div>
+        <div class="hero-text_input">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="hero-input">
+            <circle cx="16" cy="16" r="16" fill=var(--white) />
+            <line x1="15.7857" y1="8" x2="15.7857" y2="25" stroke=var(--black) />
+            <line x1="6" y1="16" x2="26" y2="16" stroke=var(--black) />
+            <title>Quick input</title>
+          </svg>
+
+        </div>
+        <div class="hero-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 32 32" id="fillter">
+            <circle fill=var(--white) cx="16" cy="16" r="16" />
+            <title>Fillter</title>
+            <path
+              d="M13.5 19.13a.62.62 0 0 1 .63-.63h3.74a.62.62 0 1 1 0 1.25h-3.75a.62.62 0 0 1-.62-.63ZM11 15.38a.62.62 0 0 1 .63-.63h8.74a.62.62 0 1 1 0 1.25h-8.75a.62.62 0 0 1-.62-.63Zm-2.5-3.76a.62.62 0 0 1 .63-.62h13.74a.62.62 0 1 1 0 1.25H9.13a.62.62 0 0 1-.62-.63Z"
+              fill=var(--black) />
+          </svg>
+          <a href="#goDown" title="Go down">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 310 320">
+              <ellipse fill=var(--white) cx="155" cy="160" rx="155" ry="160" />
+              <path
+                d="M153 237c4 4 10 4 14 0l64-64a10 10 0 00-14-14L160 216l-57-57A10 10 0 00 90 173l64 64ZM170 230V0h-20v230h20Z"
+                fill=var(--black) />
+            </svg>
+
+          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 320 320" id="chrome">
+            <circle fill=var(--white) cx="160" cy="160" r="160" />
+            <path
+              d="M110 80a30 30 0 00-30 30v80a30 30 0 00 30 20h80a30 30 0 00 20-20v-80a30 30 0 00-20-30h-80Zm90 30h-60a10 10 0 01-10 0V90h60a20 20 0 01 10 20Zm-80 0a20 20 0 00 20 10h60v70a20 20 0 01-10 10h-80a20 20 0 01-20-10v-80a20 20 0 01 20-20h10v20Zm20 130a30 30 0 01-30-20h10a10 10 0 00 20 10h60a30 30 0 00 30-30v-60a10 10 0 00-10-20v-10a30 30 0 01 20 30v60a40 40 0 01-40 40h-60Z"
+              fill=var(--black) />
+            <title>Open in own tab</title>
+          </svg>
+
+        </div>
+      </div>
+  </section>
+  <section class="button-container">
+    <button id="tab-btn" class="tooltip" data-tooltip="Click to save your current tab">save current tab</button>
+    <button id="all-tab-btn">save all tab</button>
+  </section>
+  <section class="main">
+
+    <ul id="ul-el">
+      <!-- <div class="viewdiv">
+        <div>
+          <h1> 😁 Your url‼ </h1>
+          <a href="" target=>https://chrome.google.com/webstore/search/url%20manager%20</a>
+        </div>
+      </div> -->
+
+      <div class="welcome">
+        <div>
+          <h1>Hi! There 😁</h1>
+          <p>Thank you for choosing spatium</p>
+          <span><em>save all your shit in space</em></span>
+        </div>
+      </div>
+
+
+    </ul>
+    <div id="goDown"></div>
+  </section>
+  <footer>
+    <div class="footer_input-con">
+      <input type="text" placeholder="type url to save...">
+    </div>
+    <div class="footer_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 32 32" id="fillter">
+        <circle fill=var(--white) cx="16" cy="16" r="16" />
+        <title>Fillter</title>
+        <path
+          d="M13.5 19.13a.62.62 0 0 1 .63-.63h3.74a.62.62 0 1 1 0 1.25h-3.75a.62.62 0 0 1-.62-.63ZM11 15.38a.62.62 0 0 1 .63-.63h8.74a.62.62 0 1 1 0 1.25h-8.75a.62.62 0 0 1-.62-.63Zm-2.5-3.76a.62.62 0 0 1 .63-.62h13.74a.62.62 0 1 1 0 1.25H9.13a.62.62 0 0 1-.62-.63Z"
+          fill=var(--black) />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 320 320" id="chrome">
+        <circle fill=var(--white) cx="160" cy="160" r="160" />
+        <path
+          d="M110 80a30 30 0 00-30 30v80a30 30 0 00 30 20h80a30 30 0 00 20-20v-80a30 30 0 00-20-30h-80Zm90 30h-60a10 10 0 01-10 0V90h60a20 20 0 01 10 20Zm-80 0a20 20 0 00 20 10h60v70a20 20 0 01-10 10h-80a20 20 0 01-20-10v-80a20 20 0 01 20-20h10v20Zm20 130a30 30 0 01-30-20h10a10 10 0 00 20 10h60a30 30 0 00 30-30v-60a10 10 0 00-10-20v-10a30 30 0 01 20 30v60a40 40 0 01-40 40h-60Z"
+          fill=var(--black) />
+        <title>Open in own tab</title>
+      </svg>
+      <div class="delete-btn-con">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30" height="30" viewBox="0 0 3000 3000"
+          id="delete-btn">
+          <circle fill=var(--white) cx="1500" cy="1500" r="1500" />
+          <path
+            d="M825 1125v1250c0 69 56 125 125 125h1125c69 0 125-56 125-125v-1250H825ZM1200 2250h-125v-875H1200v875Zm250 0h-125v-875h125v875Zm250 0h-125v-875H1700v875Zm250 0h-125v-875h125v875Zm281-1500h-406V594a94 94 0 00-94-94h-437a94 94 0 00-94 94V750H794a94 94 0 00-94 94V1000h1625V844a94 94 0 00-94-94Zm-530 0h-374V627H1700V750Z"
+            fill=var(--black) />
+        </svg>
+
+      </div>
+
+      <a href="#gotop">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="35" height="35" viewBox="0 0 310 320" class="gotop">
+          <ellipse fill=var(--white) cx="155" cy="160" rx="155" ry="160" />
+          <path
+            d="M153 237c4 4 10 4 14 0l64-64a10 10 0 00-14-14L160 216l-57-57A10 10 0 00 90 173l64 64ZM170 230V0h-20v230h20Z"
+            fill=var(--black) />
+          <title>Jump to top</title>
+        </svg>
+
+      </a>
+    </div>
+  </footer>
+  <script src="js/engine.js"></script>
+  <script src="js/heroImg.js"></script>
+  <script src="js/mode.js"></script>
+  <script src="index.js"></script>
+  <script src="js/Theme.js"></script>
+  <script src="js/load.js"></script>
+
+</body>
+
+</html>
